@@ -135,17 +135,87 @@ For a bot or service project, use this order:
 ```
 1. Hero (title, tagline, badges)
 2. Overview (2–4 sentences: what, for whom, why it exists)
-3. Features (table or grid, not a bullet list)
-4. Quick Start (copy-paste, works on first try)
-5. Configuration (table of env vars or config keys)
-6. Architecture (mermaid diagram or brief prose, not both)
-7. Development (run locally, test, lint)
-8. Deployment (real commands, not conceptual steps)
-9. Contributing
-10. License
+3. Just Ask an Agent (lazy reader shortcut — always include)
+4. Features (table or grid, not a bullet list)
+5. Quick Start — Let an Agent Do It (if installation is involved)
+6. Manual Setup (for people who want control)
+7. Configuration (table of env vars or config keys)
+8. Architecture (mermaid diagram or brief prose, not both)
+9. Development (run locally, test, lint)
+10. Deployment (real commands, not conceptual steps)
+11. Contributing
+12. License
 ```
 
-Not every project needs all ten. Cut what doesn't apply. Never add a section just to fill space.
+Not every project needs all twelve. Cut what doesn't apply. Never add a section just to fill space.
+
+---
+
+## The Lazy Reader Section (Required on Every README)
+
+Every Mad House README includes a "Just Ask an Agent" section near the top — after the overview, before features. This is a hard standard.
+
+The principle: not everyone will read the README. Some people just want to understand the thing or get it running. Let them. Give them a one-line instruction to drop the repo into an AI and ask it whatever they want.
+
+```markdown
+## Don't Feel Like Reading?
+
+Drop this repo into any AI assistant — Claude, ChatGPT, Copilot, whatever you use — and ask it to explain the project, walk you through setup, or answer any question you have. Everything it needs to understand this repo is already here.
+```
+
+That's the whole section. Keep it short. Don't pitch the AI or be cute about it. Just give them the shortcut and move on.
+
+**Placement rules:**
+- Always after the overview paragraph
+- Before Features
+- Under a heading like `## Don't Feel Like Reading?` or `## Just Ask an Agent`
+- Never longer than 3 sentences
+
+---
+
+## The Agent Install Prompt Section (Required When Setup Is Involved)
+
+Any README that involves installation, configuration, or running a service must include a **copy-paste agent prompt** that a reader can drop directly into their AI assistant to have it handle the whole setup.
+
+This is section 5 in the structure: **Quick Start — Let an Agent Do It**. It comes before the manual setup steps.
+
+The prompt must:
+- Tell the agent what the project is
+- Give the repo URL
+- List exactly what the agent should do, in numbered steps
+- State the reader's environment (OS, tools already installed)
+- End with "Walk me through each step one at a time"
+
+**Template:**
+
+````markdown
+## Quickest Setup — Let an Agent Do It
+
+Copy this into [Claude](https://claude.ai), [ChatGPT](https://chat.openai.com), or any AI assistant. It'll handle the whole setup — you just answer its questions.
+
+```text
+I want to set up [PROJECT NAME].
+The repo is at https://github.com/OWNER/REPO
+
+Please help me:
+1. Clone the repo
+2. [Step specific to this project]
+3. [Step specific to this project]
+4. Verify it's working
+
+I'm on [environment — e.g., Ubuntu 22.04 VPS with Docker installed].
+Walk me through each step one at a time.
+```
+
+The whole process takes under [N] minutes.
+````
+
+**Rules:**
+- The code block language tag is always `text` — never bare or `bash`. This ensures AI assistants don't try to execute it as code.
+- Steps must be real and accurate — read the repo before writing them
+- Include the environment so the agent doesn't guess
+- The prompt lives in a `text` code block so it copies cleanly
+- Keep the time estimate honest — don't write "5 minutes" if it takes 30
 
 ---
 

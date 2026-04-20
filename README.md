@@ -22,6 +22,12 @@ This repo is the fix for that. Open it before touching a bot repo and you'll kno
 
 ---
 
+## Don't Feel Like Reading?
+
+Drop this repo into any AI assistant and ask it to explain the workflow, help you fill in a handoff template, or walk you through the runbook for whatever you're trying to do. Everything it needs to guide you is in here.
+
+---
+
 ## Navigation
 
 | Section | What it answers |
@@ -79,8 +85,10 @@ All runbooks are grounded in real scripts from `samhcharles/chopsticks-lean` and
 
 | Agent | What it does |
 |---|---|
+| [librarian.agent.md](./.github/agents/librarian.agent.md) | Org-wide unification — consistent branding, badges, wording, cross-repo sync |
 | [bot-dev-playbook.agent.md](./.github/agents/bot-dev-playbook.agent.md) | Playbook agent — workflow, standards, handoff coordination |
 | [auditor.agent.md](./.github/agents/auditor.agent.md) | Audits any repo or docs set, produces scored findings |
+| [security.agent.md](./.github/agents/security.agent.md) | Security audit — secrets, auth, injection, deps, infra |
 | [updater.agent.md](./.github/agents/updater.agent.md) | Acts on audit findings systematically |
 | [writer.agent.md](./.github/agents/writer.agent.md) | Rewrites any doc to sound like a person, not a bot |
 | [beautiful-readme.agent.md](./.github/agents/beautiful-readme.agent.md) | Writes GitHub READMEs to the Mad House visual standard |
