@@ -23,6 +23,10 @@ If you're adding new content, ask: does this apply to all Mad House bots, or jus
 4. Open a PR using the PR template — fill in the What / Why / Testing sections
 5. The Librarian runs a unification pass on documentation changes before merge
 
+Default workflow for Mad House repos:
+
+https://github.com/madebymadhouse/bot-dev-playbook/blob/main/AGENTIC_GIT_WORKFLOW.md
+
 ---
 
 ## Commit format
