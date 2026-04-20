@@ -1,0 +1,23 @@
+name: Runbook gap or error
+description: Something in a runbook is wrong, outdated, or missing a step
+labels: [runbook]
+body:
+  - type: input
+    id: runbook
+    attributes:
+      label: Which runbook?
+      description: File name or path
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong?
+      description: What does the runbook say vs what actually happens?
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: Suggested fix
+      description: What should the runbook say instead? What step is missing?
