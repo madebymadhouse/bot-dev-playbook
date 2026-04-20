@@ -1,16 +1,18 @@
 # Patterns
 
-Put shared bot-development patterns here when the same structure should apply across more than one Mad House bot.
+Shared structures that apply across more than one Mad House bot or repo.
 
-Good candidates:
+## Current Patterns
 
-- command handler shape
-- service layer structure
-- config loader pattern
-- storage boundary pattern
-- testing pattern for commands or services
+| Pattern | What it describes |
+|---|---|
+| [playbook-repo-shape.md](./playbook-repo-shape.md) | How to structure a control-plane or playbook repo |
+| [beautiful-readme.md](./beautiful-readme.md) | How to write a README that communicates and looks deliberate |
 
-- playbook or control-plane repo shape
+## What belongs here
 
-Do not put full bot implementations here.
-Keep patterns small, reusable, and easy to copy into a bot repo.
+- Structures that apply across multiple bots: command handler shape, service layer, config loader, storage boundaries, testing patterns
+- Playbook and control-plane repo shapes
+- README and docs standards
+
+Do not put full bot implementations here. Keep patterns small and easy to copy into a bot repo.
