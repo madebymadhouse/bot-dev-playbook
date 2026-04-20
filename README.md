@@ -87,9 +87,11 @@ All agents are in `.github/agents/`. Drop any of them into another repo and they
 
 | Agent | What it does |
 |---|---|
+| [delegator.agent.md](./.github/agents/delegator.agent.md) | Your single entry point — describe what you want in plain language, it picks the right agents and dispatches them in order |
 | [orchestrator.agent.md](./.github/agents/orchestrator.agent.md) | Runs the full fleet — dispatches agents in sequence, collects outputs, delivers unified result |
 | [context-keeper.agent.md](./.github/agents/context-keeper.agent.md) | Writes session logs, handoffs, and decision records so nothing gets lost between sessions |
 | [librarian.agent.md](./.github/agents/librarian.agent.md) | Org-wide unification — consistent branding, badges, wording, cross-repo sync |
+| [git-keeper.agent.md](./.github/agents/git-keeper.agent.md) | Version control workflow — branching, conventional commits, PR descriptions, merge strategy |
 | [coder.agent.md](./.github/agents/coder.agent.md) | Production code implementation — minimal correct change, verified output |
 | [debugger.agent.md](./.github/agents/debugger.agent.md) | Root cause analysis — reads the failure, hypothesizes, tests, fixes |
 | [reviewer.agent.md](./.github/agents/reviewer.agent.md) | Code review before merge — correctness, security, patterns, tests |
