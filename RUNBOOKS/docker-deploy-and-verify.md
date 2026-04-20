@@ -2,7 +2,7 @@
 
 Use this when a Discord bot repo is deployed with Docker Compose.
 
-This runbook is based on the actual deploy paths documented in `samhcharles/chopsticks-lean` and `madebymadhouse/chopsticks`.
+This runbook is based on the actual deploy paths documented in `madebymadhouse/chopsticks-lean` and `madebymadhouse/chopsticks`.
 
 ## Purpose
 
@@ -120,7 +120,7 @@ Examples from the Chopsticks repos include:
 
 ## References
 
-- `samhcharles/chopsticks-lean/DEPLOYMENT.md`
-- `samhcharles/chopsticks-lean/scripts/ops/install-systemd.sh`
-- `samhcharles/chopsticks-lean/scripts/ops/chopsticks-watchdog.sh`
+- `madebymadhouse/chopsticks-lean/DEPLOYMENT.md`
+- `madebymadhouse/chopsticks-lean/scripts/ops/install-systemd.sh`
+- `madebymadhouse/chopsticks-lean/scripts/ops/chopsticks-watchdog.sh`
 - `madebymadhouse/chopsticks` deploy docs, ops docs, and control scripts

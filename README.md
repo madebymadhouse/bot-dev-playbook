@@ -60,7 +60,7 @@ HANDOFF_TEMPLATE.md    # Write this before asking an AI to implement anything
 
 ## Runbooks
 
-All runbooks are grounded in real scripts from `samhcharles/chopsticks-lean` and `madebymadhouse/chopsticks`.
+All runbooks are grounded in real scripts from `madebymadhouse/chopsticks-lean` and `madebymadhouse/chopsticks`.
 
 | Runbook | When to use it |
 |---|---|

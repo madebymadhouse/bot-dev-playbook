@@ -104,4 +104,4 @@ After the incident, record:
 
 - `madebymadhouse/chopsticks/docs/runbooks.md`
 - `madebymadhouse/chopsticks/docs/OPS.md`
-- `samhcharles/chopsticks-lean` deploy and watchdog scripts
+- `madebymadhouse/chopsticks-lean` deploy and watchdog scripts
