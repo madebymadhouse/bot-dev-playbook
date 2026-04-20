@@ -2,7 +2,7 @@
 
 # Mad House Bot Dev Playbook
 
-**Shared workflow, standards, and runbooks for AI-assisted Discord bot development.**
+**How Mad House builds Discord bots — workflow, standards, handoffs, and runbooks.**
 
 ![License](https://img.shields.io/github/license/madebymadhouse/bot-dev-playbook)
 ![Last Commit](https://img.shields.io/github/last-commit/madebymadhouse/bot-dev-playbook)
@@ -13,11 +13,12 @@
 
 ---
 
-A fresh AI or human should be able to open this repo, understand how Mad House runs Discord bot work, and walk into the correct bot repo without rebuilding context from chat. This repo is the layer between "raw idea" and "working implementation."
+AI-assisted bot work tends to drift. Context gets lost between sessions. An agent that worked great last week rewrites something that was fine. Standards that existed only in someone's head get ignored.
+
+This repo is the fix for that. Open it before touching a bot repo and you'll know how Mad House likes the work to happen, what the standards are, and what to write in the handoff before you hand a task to an AI.
 
 > [!IMPORTANT]
-> This repo is for workflow, standards, and handoffs. **It does not contain bot code.**
-> Bot-specific docs, secrets, and config live inside each bot's own repo.
+> **This repo has no bot code.** Bot-specific secrets, config, and app logic belong inside each bot's own repo — not here.
 
 ---
 
@@ -28,26 +29,26 @@ A fresh AI or human should be able to open this repo, understand how Mad House r
 | [START_HERE.md](./START_HERE.md) | What to read before touching a bot repo |
 | [STANDARDS.md](./STANDARDS.md) | Architecture, data, and quality standards that apply to all bots |
 | [WORKFLOW.md](./WORKFLOW.md) | Task types: Design / Implement / Fix / Release |
-| [HANDOFF_TEMPLATE.md](./HANDOFF_TEMPLATE.md) | Contract format for AI implementation tasks |
-| [BOT_CHECKLIST.md](./BOT_CHECKLIST.md) | What a production-worthy bot must include |
+| [HANDOFF_TEMPLATE.md](./HANDOFF_TEMPLATE.md) | How to write a handoff contract for an AI implementation task |
+| [BOT_CHECKLIST.md](./BOT_CHECKLIST.md) | What a production-ready bot needs to have |
 | [RUNBOOKS/](./RUNBOOKS/) | Step-by-step guides for repeated or risky tasks |
 | [PATTERNS/](./PATTERNS/) | Reusable structures that apply across bots |
 
 ---
 
-## How to Use This
+## Before You Start
 
-```
-1. Read START_HERE.md
-2. Read STANDARDS.md and WORKFLOW.md
-3. Fill in HANDOFF_TEMPLATE.md before asking an AI to change a bot repo
-4. Check BOT_CHECKLIST.md before calling a bot production-ready
-5. Run a RUNBOOK before any repeated or risky task
+```bash
+# Read in this order before doing anything else
+START_HERE.md          # Pre-flight questions and stop-and-clarify rules
+STANDARDS.md           # Architecture, data, and quality bar
+WORKFLOW.md            # What kind of task is this?
+HANDOFF_TEMPLATE.md    # Write this before asking an AI to implement anything
 ```
 
 > [!TIP]
-> Keep this repo stable and shared. Keep each bot repo focused on its own code and state.
-> Copy patterns from here into a bot repo only when the pattern is genuinely needed there.
+> Keep this repo stable and shared. Each bot repo owns its own code and state.
+> Copy a pattern from here into a bot repo only when it's actually needed there.
 
 ---
 
@@ -58,9 +59,10 @@ All runbooks are grounded in real scripts from `samhcharles/chopsticks-lean` and
 | Runbook | When to use it |
 |---|---|
 | [local-setup.md](./RUNBOOKS/local-setup.md) | First-time setup on a new machine |
-| [command-deployment.md](./RUNBOOKS/command-deployment.md) | Deploying slash commands to guild or global |
-| [docker-deploy-and-verify.md](./RUNBOOKS/docker-deploy-and-verify.md) | Deploying a stack update via Docker Compose |
-| [incident-triage.md](./RUNBOOKS/incident-triage.md) | Bot is down or behaving unexpectedly |
+| [command-deployment.md](./RUNBOOKS/command-deployment.md) | Deploy slash commands to a guild or globally |
+| [docker-deploy-and-verify.md](./RUNBOOKS/docker-deploy-and-verify.md) | Push a stack update, confirm all containers come up |
+| [incident-triage.md](./RUNBOOKS/incident-triage.md) | Bot is down or doing something unexpected |
+| [create-new-playbook.md](./RUNBOOKS/create-new-playbook.md) | Turn a repeated workflow into a real repo |
 
 ---
 
@@ -69,34 +71,28 @@ All runbooks are grounded in real scripts from `samhcharles/chopsticks-lean` and
 | Pattern | What it describes |
 |---|---|
 | [playbook-repo-shape.md](./PATTERNS/playbook-repo-shape.md) | How to structure a control-plane or playbook repo |
-| [beautiful-readme.md](./PATTERNS/beautiful-readme.md) | How to write a README that communicates and looks deliberate |
+| [beautiful-readme.md](./PATTERNS/beautiful-readme.md) | How to write a README that actually communicates |
 
 ---
 
 ## Agents
 
-| Agent | Purpose |
+| Agent | What it does |
 |---|---|
-| [bot-dev-playbook.agent.md](./.github/agents/bot-dev-playbook.agent.md) | Main playbook agent — workflow, standards, handoff coordination |
+| [bot-dev-playbook.agent.md](./.github/agents/bot-dev-playbook.agent.md) | Playbook agent — workflow, standards, handoff coordination |
+| [auditor.agent.md](./.github/agents/auditor.agent.md) | Audits any repo or docs set, produces scored findings |
+| [updater.agent.md](./.github/agents/updater.agent.md) | Acts on audit findings systematically |
+| [writer.agent.md](./.github/agents/writer.agent.md) | Rewrites any doc to sound like a person, not a bot |
+| [beautiful-readme.agent.md](./.github/agents/beautiful-readme.agent.md) | Writes GitHub READMEs to the Mad House visual standard |
 | [playbook-builder.agent.md](./.github/agents/playbook-builder.agent.md) | Turns repeated chat guidance into a durable repo |
-| [beautiful-readme.agent.md](./.github/agents/beautiful-readme.agent.md) | Writes or rewrites READMEs to the beautiful-readme standard |
 
 ---
 
-## Scope
+## What This Repo Is For
 
-**This repo is for:**
-- Shared AI-assisted development workflow across Mad House bots
-- Standards that apply to every bot: architecture, data boundaries, quality bar
-- Handoff contracts for AI implementation tasks
-- Runbooks for repeated or risky bot-development tasks
-- Patterns that should stay consistent across bots
+Shared workflow, standards, and runbooks that apply across all Mad House bots. Specifically: the process for AI-assisted development, the quality bar a bot has to hit before it's production-ready, and the handoff format that keeps agents on track.
 
-**This repo is not for:**
-- Production secrets or environment values
-- Bot-specific config or deploy state
-- Application code that belongs in a bot repo
-- Feature specs for a single bot
+It's not for production secrets, bot-specific config, or feature specs that only apply to one bot.
 
 ---
 
