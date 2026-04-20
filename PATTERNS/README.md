@@ -10,5 +10,7 @@ Good candidates:
 - storage boundary pattern
 - testing pattern for commands or services
 
+- playbook or control-plane repo shape
+
 Do not put full bot implementations here.
 Keep patterns small, reusable, and easy to copy into a bot repo.
