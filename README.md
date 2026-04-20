@@ -40,3 +40,12 @@ This repo is not for shipping bot code.
 - Keep each bot repo focused on code and bot-specific docs
 - Copy patterns from here into bot repos only when they are actually needed
 - Update this repo when a repeated lesson should apply across multiple bots
+
+## First Real Runbooks
+
+- `RUNBOOKS/local-setup.md`
+- `RUNBOOKS/command-deployment.md`
+- `RUNBOOKS/docker-deploy-and-verify.md`
+- `RUNBOOKS/incident-triage.md`
+
+These are based on real workflows from `madebymadhouse/chopsticks`, `samhcharles/chopsticks-lean`, and common Discord bot development practice.

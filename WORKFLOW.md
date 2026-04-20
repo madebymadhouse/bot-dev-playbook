@@ -56,3 +56,10 @@ Rules:
 - Do not make product decisions implicitly in code
 - Do not push deployment behavior into this repo if it belongs in a bot repo
 - Do not let repeated tasks stay undocumented for long
+
+## Repeated Tasks Already Captured
+
+- Local setup: `RUNBOOKS/local-setup.md`
+- Command deploy: `RUNBOOKS/command-deployment.md`
+- Docker deploy: `RUNBOOKS/docker-deploy-and-verify.md`
+- Incident triage: `RUNBOOKS/incident-triage.md`

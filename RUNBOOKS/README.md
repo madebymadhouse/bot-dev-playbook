@@ -12,6 +12,13 @@ Good candidates:
 - rate limit handling
 - incident triage for a live bot
 
+## Current Runbooks
+
+- `local-setup.md`
+- `command-deployment.md`
+- `docker-deploy-and-verify.md`
+- `incident-triage.md`
+
 Keep each runbook short:
 
 1. Purpose
