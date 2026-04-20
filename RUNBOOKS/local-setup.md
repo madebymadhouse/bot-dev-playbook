@@ -2,7 +2,7 @@
 
 Use this when bringing up a Discord bot repo for the first time on a development machine.
 
-This runbook is based on the setup flows used in `samhcharles/chopsticks-lean`, `madebymadhouse/chopsticks`, and common discord.js guidance.
+This runbook is based on the setup flows used in `madebymadhouse/chopsticks-lean`, `madebymadhouse/chopsticks`, and common discord.js guidance.
 
 ## Purpose
 
@@ -40,7 +40,7 @@ Minimum values usually include:
 
 ## Lean Bot Path
 
-This mirrors `samhcharles/chopsticks-lean`.
+This mirrors `madebymadhouse/chopsticks-lean`.
 
 ```bash
 npm ci
@@ -102,6 +102,6 @@ If the repo provides a single control script such as `chopsticksctl.sh`, prefer 
 
 ## References
 
-- `samhcharles/chopsticks-lean` README and `DEPLOYMENT.md`
+- `madebymadhouse/chopsticks-lean` README and `DEPLOYMENT.md`
 - `madebymadhouse/chopsticks` README, `QUICKSTART.md`, and deploy docs
 - discord.js guide: keep code organized and deploy commands intentionally during development

@@ -2,7 +2,7 @@
 
 Use this when adding, changing, or re-registering slash commands.
 
-This runbook is based on the deploy scripts used in `samhcharles/chopsticks-lean` and `madebymadhouse/chopsticks`.
+This runbook is based on the deploy scripts used in `madebymadhouse/chopsticks-lean` and `madebymadhouse/chopsticks`.
 
 ## Purpose
 
@@ -27,7 +27,7 @@ Why:
 
 ## Lean Repo Commands
 
-In `samhcharles/chopsticks-lean`:
+In `madebymadhouse/chopsticks-lean`:
 
 ```bash
 npm run deploy:guild
@@ -90,6 +90,6 @@ If deploy fails:
 
 ## References
 
-- `samhcharles/chopsticks-lean/scripts/deployCommands.js`
+- `madebymadhouse/chopsticks-lean/scripts/deployCommands.js`
 - `madebymadhouse/chopsticks/scripts/deployCommands.js`
 - `madebymadhouse/chopsticks` deploy and self-host docs
