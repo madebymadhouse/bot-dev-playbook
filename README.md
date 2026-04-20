@@ -35,6 +35,7 @@ Drop this repo into any AI assistant and ask it to explain the workflow, help yo
 | [START_HERE.md](./START_HERE.md) | What to read before touching a bot repo |
 | [STANDARDS.md](./STANDARDS.md) | Architecture, data, and quality standards that apply to all bots |
 | [WORKFLOW.md](./WORKFLOW.md) | Task types: Design / Implement / Fix / Release |
+| [AGENTIC_GIT_WORKFLOW.md](./AGENTIC_GIT_WORKFLOW.md) | Branch, PR, merge, and handoff rules for high-output human + agent work |
 | [HANDOFF_TEMPLATE.md](./HANDOFF_TEMPLATE.md) | How to write a handoff contract for an AI implementation task |
 | [BOT_CHECKLIST.md](./BOT_CHECKLIST.md) | What a production-ready bot needs to have |
 | [RUNBOOKS/](./RUNBOOKS/) | Step-by-step guides for repeated or risky tasks |
@@ -49,6 +50,7 @@ Drop this repo into any AI assistant and ask it to explain the workflow, help yo
 START_HERE.md          # Pre-flight questions and stop-and-clarify rules
 STANDARDS.md           # Architecture, data, and quality bar
 WORKFLOW.md            # What kind of task is this?
+AGENTIC_GIT_WORKFLOW.md # Branch / PR / merge rules for humans and agents
 HANDOFF_TEMPLATE.md    # Write this before asking an AI to implement anything
 ```
 
