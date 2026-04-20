@@ -41,6 +41,14 @@ This repo is not for shipping bot code.
 - Copy patterns from here into bot repos only when they are actually needed
 - Update this repo when a repeated lesson should apply across multiple bots
 
+## Builder Layer
+
+This repo also includes a repo-shaping helper for building new playbooks or control-plane style docs when a problem keeps getting re-explained in chat.
+
+- Agent: `.github/agents/playbook-builder.agent.md`
+- Pattern: `PATTERNS/playbook-repo-shape.md`
+- Runbook: `RUNBOOKS/create-new-playbook.md`
+
 ## First Real Runbooks
 
 - `RUNBOOKS/local-setup.md`
