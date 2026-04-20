@@ -71,6 +71,7 @@ All runbooks are grounded in real scripts from `madebymadhouse/chopsticks-lean` 
 | [docker-deploy-and-verify.md](./RUNBOOKS/docker-deploy-and-verify.md) | Push a stack update, confirm all containers come up |
 | [incident-triage.md](./RUNBOOKS/incident-triage.md) | Bot is down or doing something unexpected |
 | [create-new-playbook.md](./RUNBOOKS/create-new-playbook.md) | Turn a repeated workflow into a real repo |
+| [org-standardization-pass.md](./RUNBOOKS/org-standardization-pass.md) | Pull the full org local, audit drift, sync agents, and open PRs repo by repo |
 
 ---
 
